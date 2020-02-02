@@ -13,7 +13,7 @@ cimport cython
 
 import numpy as np
 
-from FibonacciHeap cimport FibonacciHeap
+from fibonacciheap.FibonacciHeap cimport FibonacciHeap
 
 @cython.boundscheck(False)
 @cython.wraparound(False)

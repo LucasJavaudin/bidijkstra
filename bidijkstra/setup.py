@@ -2,22 +2,26 @@ from distutils.core import setup
 from distutils.extension import Extension
 from Cython.Build import cythonize
 
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
 ext_modules = [
     Extension(
         "bidijkstra_py_compiled",
-        ["bidijkstra_py_compiled.py"],
+        [os.path.join(here, "bidijkstra_py_compiled.py")],
     ),
     Extension(
         "bidijkstra_cython",
-        ["bidijkstra_cython.pyx"],
+        [os.path.join(here, "bidijkstra_cython.pyx")],
     ),
     Extension(
         "bidijkstra_fibonacci",
-        ["bidijkstra_fibonacci.pyx"],
+        [os.path.join(here, "bidijkstra_fibonacci.pyx")],
     ),
     Extension(
-        "bidijktra_openmp",
-        ["bidijktra_openmp.pyx"],
+        "bidijktsra_openmp",
+        [os.path.join(here, "bidijkstra_openmp.pyx")],
         extra_compile_args=['-fopenmp'],
         extra_link_args=['-fopenmp'],
     ),
