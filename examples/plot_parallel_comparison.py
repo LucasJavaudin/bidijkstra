@@ -85,12 +85,8 @@ for n in x:
 
 for method, times in times_methods.items():
     plt.plot(np.log(x), times, label=method)
-    plt.legend()
-    plt.xlabel('Number of nodes')
-    plt.ylabel('Time (s)')
-    plt.title('Comparison of methods for multiple problems')
-plt.show()
-
-
-
-
+plt.legend()
+plt.xlabel('Number of nodes')
+plt.ylabel('Time (s)')
+plt.title('Comparison of methods for multiple problems')
+plt.savefig('plot_parallel_comparison.pdf')
