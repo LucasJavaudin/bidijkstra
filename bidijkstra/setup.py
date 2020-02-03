@@ -20,7 +20,7 @@ ext_modules = [
         [os.path.join(here, "bidijkstra_fibonacci.pyx")],
     ),
     Extension(
-        "bidijktsra_openmp",
+        "bidijkstra_openmp",
         [os.path.join(here, "bidijkstra_openmp.pyx")],
         extra_compile_args=['-fopenmp'],
         extra_link_args=['-fopenmp'],

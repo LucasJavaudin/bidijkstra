@@ -14,7 +14,7 @@ from bidijkstra.bidijkstra_py import dijkstra as dijkstra_python
 from bidijkstra.bidijkstra_py_compiled import dijkstra as dijkstra_python_compiled
 from bidijkstra.bidijkstra_cython import dijkstra as dijkstra_cython
 from bidijkstra.bidijkstra_fibonacci import dijkstra as dijkstra_cython_fibo
-from bidijkstra.bidijktsra_openmp import multi_dijkstra as multi_dijkstra_openmp
+from bidijkstra.bidijkstra_openmp import multi_dijkstra as multi_dijkstra_openmp
 
 # Generate a dict containing the name and expression
 method_functions = {'Networkx bidirectional': 'nx.bidirectional_dijkstra(G, source, target)',
