@@ -65,7 +65,7 @@ namespace std {
             // Insert key.
             Node* x = new Node(this->currentId++, value, key);
             this->roots.insert(x);
-            if (!this->min or value < this->min->value) {
+            if (!this->min || value < this->min->value) {
                 this->min = x;
             }
             this->n++;
@@ -76,7 +76,7 @@ namespace std {
             if (value < x->value) {
                 x->value = value;
                 Node* y = x->parent;
-                if (y and x->value < y->value) {
+                if (y && x->value < y->value) {
                     cut(x, y);
                     cascadingCut(y);
                 }
@@ -91,7 +91,7 @@ namespace std {
         if (this->nodes_map.find(key) == this->nodes_map.end()) {
             Node* x = new Node(this->currentId++, value, key);
             this->roots.insert(x);
-            if (!this->min or value < this->min->value) {
+            if (!this->min || value < this->min->value) {
                 this->min = x;
             }
             this->n++;
@@ -110,7 +110,7 @@ namespace std {
             if (value < x->value) {
                 x->value = value;
                 Node* y = x->parent;
-                if (y and x->value < y->value) {
+                if (y && x->value < y->value) {
                     cut(x, y);
                     cascadingCut(y);
                 }
@@ -156,7 +156,7 @@ namespace std {
             while (A[d]) {
                 Node* y = A[d];
                 if (x->value > y->value) {
-                    // Swap x and y.
+                    // Swap x && y.
                     Node* t = x;
                     x = y;
                     y = t;
@@ -171,7 +171,7 @@ namespace std {
         for (unsigned int i=0; i<this->n; i++) {
             if (A[i]) {
                 this->roots.insert(A[i]);
-                if (!this->min or A[i]->value < this->min->value) {
+                if (!this->min || A[i]->value < this->min->value) {
                     this->min = A[i];
                 }
             }
